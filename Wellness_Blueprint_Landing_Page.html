@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why You're Always Tired, Wired & Worried — Wellness Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EF;
+    --paper:#F3ECE1;
+    --paper-line:#E4D9C8;
+    --plum:#2E2033;
+    --plum-deep:#1E1522;
+    --plum-soft:#4A3A50;
+    --ink:#241E2C;
+    --ink-soft:#6C5F70;
+    --ink-faint:#A79CAA;
+    --coral:#D9735F;
+    --coral-deep:#B85842;
+    --coral-tint:#F3DDD4;
+    --sage:#7C8C67;
+    --sage-deep:#5C6B49;
+    --sage-tint:#E5EADC;
+    --gold:#C9A66B;
+    --shadow-soft: 0 20px 60px -20px rgba(46,32,51,0.25);
+    --shadow-card: 0 10px 30px -12px rgba(46,32,51,0.18);
+    --radius: 20px;
+    --font-display:'Fraunces', serif;
+    --font-body:'Work Sans', sans-serif;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .eyebrow{
+    font-family:var(--font-body);
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--coral-deep);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px;
+    height:1px;
+    background:var(--coral-deep);
+    display:inline-block;
+  }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    color:var(--plum);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .section{ padding:96px 0; }
+  .section-alt{ background:var(--paper); border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line); }
+  .center{ text-align:center; }
+  .section-head{ max-width:640px; margin:0 auto 56px; }
+  .section-head.left{ margin:0 0 56px; }
+  .lede{
+    font-size:19px;
+    color:var(--ink-soft);
+    margin-top:18px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:16px;
+    padding:17px 119px;
+    border-radius:100px;
+    text-decoration:none;
+    cursor:pointer;
+    border:none;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--coral);
+    color:#fff;
+    box-shadow:0 14px 30px -10px rgba(217,115,95,0.55);
+  }
+  .btn-primary:hover{ background:var(--coral-deep); transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(184,88,66,0.55); }
+  .btn-ghost{
+    background:transparent;
+    color:var(--cream);
+    border:1px solid rgba(251,246,239,0.4);
+  }
+  .btn-ghost:hover{ background:rgba(251,246,239,0.1); }
+  .btn-dark{
+    background:var(--plum);
+    color:var(--cream);
+  }
+  .btn-dark:hover{ background:var(--plum-deep); transform:translateY(-2px); }
+  .btn-whatsapp{
+    background:#25D366;
+    color:#fff;
+    box-shadow:0 14px 30px -10px rgba(37,211,102,0.55);
+  }
+  .btn-whatsapp:hover{ background:#1DA851; transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(29,168,81,0.55); }
+
+  /* floating whatsapp bubble */
+  .wa-float{
+    position:fixed;
+    bottom:26px; right:26px;
+    z-index:200;
+    width:60px; height:60px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(37,211,102,0.65);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .wa-float:hover{ transform:translateY(-3px) scale(1.05); box-shadow:0 18px 36px -8px rgba(29,168,81,0.7); }
+  .wa-float svg{ width:30px; height:30px; fill:#fff; }
+  .wa-float .wa-ping{
+    position:absolute; inset:0; border-radius:50%;
+    background:#25D366;
+    opacity:0.55;
+    animation:waPing 2.4s ease-out infinite;
+  }
+  @keyframes waPing{
+    0%{ transform:scale(1); opacity:0.5; }
+    100%{ transform:scale(1.7); opacity:0; }
+  }
+  @media (max-width:560px){
+    .wa-float{ width:54px; height:54px; bottom:18px; right:18px; }
+    .wa-float svg{ width:26px; height:26px; }
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,239,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:19px;
+    color:var(--plum);
+    letter-spacing:-0.01em;
+  }
+  .brand .mark{
+    width:40px; height:40px; 
+    border-radius:50%;
+    /* background:conic-gradient(from 200deg, var(--coral), var(--gold), var(--sage), var(--coral)); */
+    display:inline-block;
+    position:relative;
+  }
+  .mark img{
+    border-radius:50%;
+  }
+  .brand .mark::after{
+    /* content:""; */
+    position:absolute; 
+    /* inset:5px; */
+    border-radius:50%;
+    background:var(--cream);
+  }
+  .nav-cta{ font-size:14px; padding:12px 24px; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:60px 0 40px;
+  }
+  .hero-glow{
+    position:absolute;
+    top:-220px; right:-160px;
+    width:640px; height:640px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(217,115,95,0.22), rgba(217,115,95,0) 70%);
+    pointer-events:none;
+  }
+  .hero-glow2{
+    position:absolute;
+    bottom:-260px; left:-200px;
+    width:560px; height:560px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(124,140,103,0.20), rgba(124,140,103,0) 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:46px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:52px;
+    line-height:1.08;
+    font-weight:600;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--coral-deep);
+  }
+  .hero .lede{ max-width:480px; }
+  .hero-actions{
+    display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+    margin-top:34px;
+  }
+  .hero-note{
+    font-size:13.5px; color:var(--ink-soft);
+  }
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:22px;
+    margin-top:38px;
+    padding-top:28px;
+    border-top:1px solid var(--paper-line);
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:9px;
+    font-size:13.5px; font-weight:600; color:var(--plum-soft);
+  }
+  .trust-item .dot{
+    width:7px; height:7px; border-radius:50%; background:var(--sage-deep); flex-shrink:0;
+  }
+
+  /* book mockup */
+  .book-stage{
+    position:relative;
+    display:flex; 
+    align-items:center; justify-content:center;
+    perspective:1300px;
+  }
+  .book{
+    width:100%;
+    max-width:650px;
+    position:relative;
+    animation:float 6s ease-in-out infinite;
+  }
+  .book img{
+    width:100%;
+    height:auto;
+    display:block;
+    filter:drop-shadow(0 35px 50px rgba(46,32,51,0.35));
+  }
+  @keyframes float{
+    0%,100%{ transform:translateY(0px); }
+    50%{ transform:translateY(-14px); }
+  }
+
+  /* breathing pacer */
+  .pacer-wrap{
+    margin-top:54px;
+    display:flex; align-items:center; gap:26px;
+    background:#fff;
+    border:1px solid var(--paper-line);
+    border-radius:100px;
+    padding:14px 26px 14px 14px;
+    box-shadow:var(--shadow-card);
+    max-width:460px;
+  }
+  .pacer-circle-wrap{
+    width:64px; height:64px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .pacer-ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1.5px solid var(--sage-tint);
+  }
+  .pacer-dot{
+    width:30px; height:30px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--sage), var(--sage-deep));
+    animation: breathe 12s ease-in-out infinite;
+  }
+  @keyframes breathe{
+    0%{ transform:scale(0.55); }
+    33%{ transform:scale(1); }
+    50%{ transform:scale(1); }
+    83%{ transform:scale(0.55); }
+    100%{ transform:scale(0.55); }
+  }
+  .pacer-text{ font-size:13.5px; color:var(--ink-soft); }
+  .pacer-text strong{
+    display:block; color:var(--plum); font-size:14.5px; font-weight:600; margin-bottom:2px;
+  }
+  #pacerLabel{ color:var(--sage-deep); font-weight:700; }
+
+  /* ---------- RECOGNITION ---------- */
+  .signs-list{
+    display:grid;
+    gap:0;
+    border-top:1px solid var(--paper-line);
+  }
+  .sign-row{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:28px;
+    padding:34px 0;
+    border-bottom:1px solid var(--paper-line);
+    align-items:start;
+  }
+  .sign-num{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:500;
+    font-size:38px;
+    color:var(--coral-tint);
+    -webkit-text-stroke:1px var(--coral);
+    color:transparent;
+  }
+  .sign-row p{ margin:0; font-size:18px; color:var(--plum-soft); max-width:640px; }
+  .sign-row p b{ color:var(--plum); font-weight:600; }
+  .signs-close{
+    margin-top:40px;
+    font-size:19px;
+    color:var(--plum);
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:500;
+    max-width:680px;
+    line-height:1.5;
+  }
+
+  /* ---------- CHAPTERS GRID ---------- */
+  .chapters-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:18px;
+  }
+  .chapter-card{
+    background:#fff;
+    border:1px solid var(--paper-line);
+    border-radius:16px;
+    padding:26px 22px;
+    box-shadow:var(--shadow-card);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .chapter-card:hover{ transform:translateY(-4px); box-shadow:0 18px 40px -16px rgba(46,32,51,0.28); }
+  .chapter-card .num{
+    font-family:var(--font-display);
+    font-size:14px;
+    font-weight:600;
+    color:var(--coral-deep);
+    letter-spacing:0.06em;
+  }
+  .chapter-card .icon{
+    width:38px; height:38px;
+    margin:14px 0 12px;
+    border-radius:10px;
+    background:var(--sage-tint);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .chapter-card .icon svg{ width:19px; height:19px; stroke:var(--sage-deep); }
+  .chapter-card h4{
+    font-family:var(--font-display);
+    font-size:17.5px;
+    font-weight:600;
+    color:var(--plum);
+    margin:0 0 8px;
+    line-height:1.3;
+  }
+  .chapter-card p{
+    font-size:14px; color:var(--ink-soft); margin:0; line-height:1.55;
+  }
+  .plan-tag{
+    margin-top:22px;
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--plum);
+    color:var(--cream);
+    padding:12px 22px;
+    border-radius:100px;
+    font-size:13.5px; font-weight:600;
+  }
+  .plan-tag .plus{ color:var(--coral); font-family:var(--font-display); font-style:italic; }
+
+  /* ---------- SYSTEM DIAGRAM ---------- */
+  .system-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .system-copy p{ font-size:16.5px; color:var(--ink-soft); margin:0 0 16px; }
+  .system-copy p:last-child{ margin-bottom:0; }
+  .diagram{
+    position:relative;
+    aspect-ratio:1/1;
+    max-width:420px;
+    margin:0 auto;
+  }
+  .diagram-center{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:118px; height:118px; border-radius:50%;
+    background:var(--plum);
+    color:var(--cream);
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:15px;
+    z-index:3;
+    box-shadow:0 20px 40px -14px rgba(46,32,51,0.4);
+  }
+  .diagram-node{
+    position:absolute;
+    width:132px;
+    background:#fff;
+    border:1px solid var(--paper-line);
+    border-radius:14px;
+    padding:12px 14px;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--plum-soft);
+    box-shadow:var(--shadow-card);
+    z-index:2;
+    text-align:center;
+    line-height:1.35;
+  }
+  .diagram-node span{
+    display:block; font-size:10.5px; font-weight:600; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--coral-deep); margin-bottom:3px;
+  }
+  .diagram-node.n1{ top:-6%; left:50%; transform:translateX(-50%); }
+  .diagram-node.n2{ top:32%; right:-14%; }
+  .diagram-node.n3{ bottom:-6%; left:50%; transform:translateX(-50%); }
+  .diagram-node.n4{ top:32%; left:-14%; }
+  .diagram svg.lines{ position:absolute; inset:0; width:100%; height:100%; z-index:1; }
+  .diagram svg.lines line{ stroke:var(--paper-line); stroke-width:2; }
+
+  /* ---------- ABOUT ---------- */
+  .about-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .badge-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+  .badge{
+    font-size:13px; font-weight:600; color:var(--sage-deep);
+    background:var(--sage-tint);
+    border-radius:100px;
+    padding:9px 16px;
+  }
+  .about-card{
+    background:var(--plum);
+    border-radius:24px;
+    padding:44px;
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .about-card::before{
+    content:"";
+    position:absolute; top:-80px; right:-80px;
+    width:220px; height:220px; border-radius:50%;
+    background:radial-gradient(circle, rgba(217,115,95,0.35), rgba(217,115,95,0) 70%);
+  }
+  .about-card .quote{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:22px;
+    font-weight:500;
+    line-height:1.45;
+    position:relative;
+    z-index:2;
+  }
+  .about-card .who{
+    margin-top:22px;
+    font-size:13.5px;
+    color:var(--sage-tint);
+    font-weight:600;
+    letter-spacing:0.04em;
+    position:relative; z-index:2;
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  .testi-card{
+    background:#fff;
+    border:1px solid var(--paper-line);
+    border-radius:18px;
+    padding:30px 26px;
+    box-shadow:var(--shadow-card);
+    display:flex; flex-direction:column;
+  }
+  .stars{ color:var(--gold); font-size:14px; letter-spacing:2px; margin-bottom:16px; }
+  .testi-card p{ font-size:15.5px; color:var(--plum-soft); flex-grow:1; margin:0 0 20px; }
+  .testi-who{ display:flex; align-items:center; gap:12px; }
+  .testi-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(135deg, var(--coral), var(--sage));
+    flex-shrink:0;
+  }
+  .testi-avatar img{
+    border-radius:50%;
+  }
+  .testi-name{ font-size:14px; font-weight:600; color:var(--plum); }
+  .testi-loc{ font-size:12.5px; color:var(--ink-faint); }
+
+  /* ---------- PRICING ---------- */
+  .price-card{
+    max-width:560px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:28px;
+    border:1px solid var(--paper-line);
+    box-shadow:var(--shadow-soft);
+    overflow:hidden;
+  }
+  .price-top{
+    background:linear-gradient(155deg, var(--plum), var(--plum-deep));
+    color:var(--cream);
+    padding:38px 40px 32px;
+    text-align:center;
+  }
+  .price-top .book-title{
+    font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:6px;
+  }
+  .price-top .book-sub{
+    font-family:var(--font-display); font-style:italic; font-size:14px; color:var(--coral-tint);
+  }
+  .price-body{ padding:36px 40px 40px; }
+  .price-row{
+    display:flex; align-items:baseline; justify-content:center; gap:14px;
+    margin-bottom:6px;
+  }
+  .price-old{ font-size:20px; color:var(--ink-faint); text-decoration:line-through; }
+  .price-new{ font-family:var(--font-display); font-size:44px; font-weight:600; color:var(--plum); }
+  .price-caption{ text-align:center; font-size:13px; color:var(--ink-soft); margin-bottom:28px; }
+  .price-features{ list-style:none; padding:0; margin:0 0 30px; }
+  .price-features li{
+    display:flex; align-items:flex-start; gap:12px;
+    font-size:14.5px; color:var(--plum-soft);
+    padding:10px 0;
+    border-bottom:1px dashed var(--paper-line);
+  }
+  .price-features li:last-child{ border-bottom:none; }
+  .price-features .check{
+    width:19px; height:19px; border-radius:50%;
+    background:var(--sage-tint);
+    color:var(--sage-deep);
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:700;
+    margin-top:1px;
+  }
+  .price-cta{ width:100%; }
+  .price-wa-link{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:13.5px;
+    font-weight:600;
+    color:#1DA851;
+    text-decoration:none;
+  }
+  .price-wa-link:hover{ text-decoration:underline; }
+  .price-trust{
+    display:flex; justify-content:center; gap:18px; flex-wrap:wrap;
+    margin-top:20px; font-size:12.5px; color:var(--ink-soft);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{ max-width:760px; margin:0 auto; }
+  details{
+    border-bottom:1px solid var(--paper-line);
+    padding:22px 0;
+  }
+  details summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:var(--font-display);
+    font-size:18px;
+    font-weight:600;
+    color:var(--plum);
+  }
+  details summary::-webkit-details-marker{ display:none; }
+  details summary::after{
+    content:"+";
+    font-size:22px;
+    color:var(--coral-deep);
+    font-family:var(--font-body);
+    font-weight:400;
+    transition:transform .2s ease;
+    flex-shrink:0;
+    margin-left:20px;
+  }
+  details[open] summary::after{ content:"–"; }
+  details p{ margin:14px 0 0; color:var(--ink-soft); font-size:15px; max-width:640px; }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(155deg, var(--plum) 0%, var(--plum-deep) 100%);
+    color:var(--cream);
+    text-align:center;
+    padding:100px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .final-cta::before{
+    content:"";
+    position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+    width:700px; height:700px; border-radius:50%;
+    background:radial-gradient(circle, rgba(217,115,95,0.18), rgba(217,115,95,0) 70%);
+  }
+  .final-cta h2{ color:var(--cream); font-size:38px; max-width:640px; margin:0 auto; position:relative; z-index:2; }
+  .final-cta .lede{ color:rgba(251,246,239,0.75); max-width:520px; margin:18px auto 34px; position:relative; z-index:2; }
+  .final-cta .actions{ position:relative; z-index:2; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding:48px 0 40px; }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px;
+    border-top:1px solid var(--paper-line);
+    padding-top:30px;
+  }
+  .footer-note{ font-size:12.5px; color:var(--ink-faint); max-width:520px; line-height:1.6; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:920px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .book-stage{ order:-1; margin-bottom:10px; }
+    .book{ max-width:490px; }
+    .hero h1{ font-size:38px; }
+    .chapters-grid{ grid-template-columns:repeat(2, 1fr); }
+    .system-wrap, .about-wrap{ grid-template-columns:1fr; }
+    .about-card{ order:-1; }
+    .testi-grid{ grid-template-columns:1fr; }
+    .diagram{ margin-top:20px; }
+    .final-cta h2{ font-size:29px; }
+    .section{ padding:68px 0; }
+  }
+  @media (max-width:560px){
+    .chapters-grid{ grid-template-columns:1fr; }
+    .sign-row{ grid-template-columns:50px 1fr; gap:16px; }
+    .sign-num{ font-size:28px; }
+    .price-body, .price-top{ padding-left:24px; padding-right:24px; }
+    .nav-inner{ padding:16px 20px; }
+    .container{ padding:0 20px; }
+  }
+</style>
+<!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1030772333218949');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1030772333218949&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="mark"><img src="img/logo.jpg" alt="">
+      </span> Wellness Blueprint
+    </div>
+    <a href="https://selar.com/474410d18l" class="btn btn-primary nav-cta">Get the Book</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">A Wellness Blueprint Guide</div>
+        <h1>Why You're Always <em>Tired, Wired</em> & Worried</h1>
+        <p class="lede">Eight short chapters. One connected system explaining your fatigue, your anxiety, your sleep, your gut, your burnout, and your blood pressure, plus a practical 14-day plan to actually do something about it.</p>
+
+        <div class="hero-actions">
+          <a href="https://selar.com/m/Isesele" class="btn btn-primary">Get Instant Access →</a>
+          <!-- <a href="https://wa.me/2340000000000?text=Hi!%20I'd%20like%20to%20know%20more%20about%20the%20Tired%2C%20Wired%20%26%20Worried%20ebook" target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.6 6.32A8.85 8.85 0 0012.03 3.5c-4.9 0-8.9 4-8.9 8.9 0 1.57.41 3.1 1.19 4.45L3 21l4.28-1.12a8.9 8.9 0 004.75 1.36h.01c4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.62-2.34-6.02zm-5.57 13.7h-.01a7.4 7.4 0 01-3.77-1.03l-.27-.16-2.8.74.75-2.73-.18-.28a7.38 7.38 0 01-1.13-3.96c0-4.08 3.32-7.4 7.41-7.4a7.36 7.36 0 017.4 7.4c0 4.08-3.32 7.42-7.4 7.42zm4.06-5.55c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.66-.18-.44-.37-.38-.5-.38-.13-.01-.28-.01-.43-.01a.83.83 0 00-.6.28c-.2.22-.79.77-.79 1.87s.81 2.17.92 2.32c.11.15 1.6 2.44 3.87 3.42.54.23 .96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.31-.54 1.5-1.05.18-.51.18-.95.13-1.05-.05-.1-.2-.16-.42-.27z"/></svg>
+            Chat on WhatsApp
+          </a> -->
+          <span class="hero-note">Instant PDF download · Read on any device</span>
+        </div>
+
+        <div class="pacer-wrap">
+          <div class="pacer-circle-wrap">
+            <div class="pacer-ring"></div>
+            <div class="pacer-dot"></div>
+          </div>
+          <div class="pacer-text">
+            <strong>This is a tool from Chapter 6.</strong>
+            Follow the circle: <span id="pacerLabel">breathe in</span>
+          </div>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item"><span class="dot"></span>8 practical chapters</div>
+          <div class="trust-item"><span class="dot"></span>14-day reset plan included</div>
+          <div class="trust-item"><span class="dot"></span>Built with Nigerian readers in mind</div>
+        </div>
+      </div>
+
+      <div class="book-stage">
+        <div class="book">
+          <img src="img/book112.png" alt="Why You're Always Tired, Wired & Worried — book cover mockup">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Be Honest With Yourself</div>
+      <h2>You Already Know Something's Off</h2>
+      <p class="lede">Millions of people are quietly typing the same questions into a search bar, at the same hour, wondering what's wrong. If any of this sounds familiar, keep reading.</p>
+    </div>
+
+    <div class="signs-list">
+      <div class="sign-row">
+        <div class="sign-num">01</div>
+        <p><b>You wake up already exhausted</b> — no matter how many hours you slept, or how early you went to bed.</p>
+      </div>
+      <div class="sign-row">
+        <div class="sign-num">02</div>
+        <p><b>Your chest tightens or your heart races</b> for no reason you can point to, and you've scanned your whole day looking for a cause.</p>
+      </div>
+      <div class="sign-row">
+        <div class="sign-num">03</div>
+        <p><b>You've read enough at 1 a.m.</b> to self-diagnose three different conditions, and none of them quite fit.</p>
+      </div>
+      <div class="sign-row">
+        <div class="sign-num">04</div>
+        <p><b>You took a whole week off</b> — slept in, did nothing, saw no one — and came back just as drained as when you left.</p>
+      </div>
+      <div class="sign-row">
+        <div class="sign-num">05</div>
+        <p><b>You're bloated, foggy, or irritable</b> after almost every meal, and somewhere along the way you stopped noticing that isn't normal.</p>
+      </div>
+      <div class="sign-row">
+        <div class="sign-num">06</div>
+        <p><b>You've been told your blood pressure is "a little high"</b> more than once, and you keep meaning to actually look into it.</p>
+      </div>
+    </div>
+
+    <p class="signs-close">None of this is random, and none of it is a personal failing. It's a system that's overloaded — and systems can be brought back into balance. That's exactly what this book walks you through.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow" style="justify-content:center;">What You're Getting</div>
+      <h2>One System. Eight Practical Fixes.</h2>
+      <p class="lede">Every chapter answers one specific question, the kind you've probably typed into a search bar late at night, then hands you a tool you can use the same day you read it.</p>
+    </div>
+
+    <div class="chapters-grid">
+      <div class="chapter-card">
+        <div class="num">Chapter 01</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h4>The Exhaustion Trap</h4>
+        <p>Why fatigue has layers (physical, mental, emotional) and why rest alone hasn't been fixing yours.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 02</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 13a8 8 0 1116 0c0 3-2 4-2 7H6c0-3-2-4-2-7z"/></svg></div>
+        <h4>The Anxious Body</h4>
+        <p>Why you feel wired with nothing "wrong," and what your nervous system is actually doing about it.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 03</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 12a8 8 0 11-8-8 6 6 0 006 6 5 5 0 002-.4z"/></svg></div>
+        <h4>The Sleep Reset</h4>
+        <p>Quality over quantity — light, wind-down routines, and caffeine timing you can start tonight.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 04</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3c3 3 5 6 5 9a5 5 0 01-10 0c0-3 2-6 5-9z"/></svg></div>
+        <h4>Your Gut Is Talking</h4>
+        <p>The gut-brain connection, and the small food swaps that matter more than any diet plan.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 05</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+        <h4>When Rest Doesn't Feel Like Rest</h4>
+        <p>Why burnout isn't fixed by rest alone, and the boundaries most advice never mentions.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 06</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h4l2-7 4 14 2-7h4"/></svg></div>
+        <h4>Natural Reset Tools</h4>
+        <p>Breathwork, movement, and journaling: fast, free ways to regulate your nervous system daily.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 07</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
+        <h4>The Silent Pressure</h4>
+        <p>How chronic stress connects to blood pressure, especially if you're reading this in Nigeria.</p>
+      </div>
+      <div class="chapter-card">
+        <div class="num">Chapter 08</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+        <h4>Your 14-Day Reset Plan</h4>
+        <p>Everything from Chapters 1–7, sequenced into a routine that won't overwhelm you.</p>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:32px;">
+      <span class="plan-tag"><span class="plus">+</span> Plus a weekly maintenance check-in for after day 14</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ONE SYSTEM -->
+<section class="section">
+  <div class="container">
+    <div class="system-wrap">
+      <div class="system-copy">
+        <div class="eyebrow">Why This Works When Other Advice Doesn't</div>
+        <h2 style="margin-bottom:20px;">Your Body Doesn't Separate These Problems</h2>
+        <p>Most health content treats fatigue, anxiety, sleep, and gut health as separate problems, each with its own separate fix. That's part of why so much of it doesn't work: you can perfect your sleep schedule and still feel wired all day if your nervous system never learned how to stand down.</p>
+        <p>Wellness Blueprint treats these as what they actually are — one interconnected system, running through your nervous system's alert-versus-calm switch, your sleep cycles, your blood sugar, and the gut-brain connection most people were never taught about.</p>
+        <p>Fix the system, and the individual symptoms start moving on their own.</p>
+      </div>
+      <div class="diagram">
+        <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <line x1="50" y1="8" x2="50" y2="38"/>
+          <line x1="92" y1="42" x2="63" y2="50"/>
+          <line x1="50" y1="92" x2="50" y2="62"/>
+          <line x1="8" y1="42" x2="37" y2="50"/>
+        </svg>
+        <div class="diagram-node n1"><span>Nervous System</span>Alert vs. calm mode</div>
+        <div class="diagram-node n2"><span>Sleep</span>Cycles &amp; quality</div>
+        <div class="diagram-node n3"><span>Blood Sugar</span>Energy stability</div>
+        <div class="diagram-node n4"><span>Gut-Brain</span>The second brain</div>
+        <div class="diagram-center">You,<br>overloaded<br>not broken</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="about-wrap">
+      <div>
+        <div class="eyebrow">About Wellness Blueprint</div>
+        <h2 style="margin-bottom:18px;">Practical Guides for Feeling Like Yourself Again</h2>
+        <p class="lede" style="margin-top:0;">Wellness Blueprint translates real health research into small, doable actions that fit an actual life. No expensive supplements, no hour-long routines, no dramatic overhauls — just clear explanations and tools you can use the same day.</p>
+        <div class="badge-row">
+          <span class="badge">Evidence-informed</span>
+          <span class="badge">No medical jargon</span>
+          <span class="badge">Built for real schedules</span>
+          <span class="badge">Nigerian context included</span>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="quote">"Nothing is wrong with you. Something is overloaded — and systems can be brought back into balance. That's the entire premise of this book."</div>
+        <div class="who">— From the Introduction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow" style="justify-content:center;">Readers Say</div>
+      <h2>Real Words From Early Readers</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"I finally understood why sleeping eight hours never actually felt like enough. The sleep chapter alone was worth getting this."</p>
+        <div class="testi-who">
+          <div class="testi-avatar"><img src="img/NigerianWoman_50s.jpeg" alt=""></div>
+          <div><div class="testi-name">Amaka O.</div><div class="testi-loc">Lagos</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"The breathing exercises in Chapter 6 are the first thing that's ever actually calmed me down in the moment, not just in theory."</p>
+        <div class="testi-who">
+          <div class="testi-avatar"><img src="img/NigerianWoman.jpeg" alt=""></div>
+          <div><div class="testi-name">Tunde A.</div><div class="testi-loc">Abuja</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"I've tried supplements, apps, everything. This is the first thing that actually explained the why behind all of it."</p>
+        <div class="testi-who">
+          <div class="testi-avatar"><img src="img/NigerianWoman_50s.jpeg" alt=""></div>
+          <div><div class="testi-name">Ngozi E.</div><div class="testi-loc">Port Harcourt</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow" style="justify-content:center;">Get Your Copy</div>
+      <h2>Everything You Need, In One Guide</h2>
+      <p class="lede">One payment. Instant access. Yours to keep and re-read whenever you need it.</p>
+    </div>
+
+    <div class="price-card">
+      <div class="price-top">
+        <div class="book-title">Why You're Always Tired, Wired & Worried</div>
+        <div class="book-sub">— and how to finally feel like yourself again —</div>
+      </div>
+      <div class="price-body">
+        <div class="price-row">
+          <span class="price-old">₦15,000</span>
+          <span class="price-new">₦7,000</span>
+        </div>
+        <p class="price-caption">Launch price · replace with your real pricing before publishing</p>
+
+        <ul class="price-features">
+          <li><span class="check">✓</span> Introduction + all 8 chapters</li>
+          <li><span class="check">✓</span> The 14-Day Reset Plan, fully sequenced</li>
+          <li><span class="check">✓</span> Closing maintenance &amp; weekly check-in template</li>
+          <li><span class="check">✓</span> Gut-health food swap reference table</li>
+          <li><span class="check">✓</span> Breathing &amp; journaling toolkit</li>
+          <li><span class="check">✓</span> Instant PDF download, read on any device</li>
+        </ul>
+
+        <a href="https://selar.com/474410d18l" class="btn btn-primary price-cta">Get Instant Access →</a>
+        <a href="https://wa.me/2340000000000?text=Hi!%20I%20have%20a%20question%20before%20buying%20the%20Tired%2C%20Wired%20%26%20Worried%20ebook" target="_blank" rel="noopener" class="price-wa-link">Not ready to buy? Chat with us on WhatsApp first →</a>
+        <div class="price-trust">
+          <span>🔒 Secure checkout</span>
+          <span>⚡ Instant delivery</span>
+          <span>📱 Read on any device</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow" style="justify-content:center;">Questions Answered</div>
+      <h2>You Asked. Here's the Truth.</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Is this a medical treatment plan?</summary>
+        <p>No. This book is educational and explains the everyday systems behind fatigue, anxiety, sleep, gut health, burnout, and blood pressure. It isn't a substitute for professional diagnosis or care, and it says so clearly where it matters.</p>
+      </details>
+      <details>
+        <summary>Do I need any special app to read this?</summary>
+        <p>No. It's delivered as a PDF you can read on your phone, tablet, or computer — no app, no subscription, nothing extra to install.</p>
+      </details>
+      <details>
+        <summary>How long will it take me to get through it?</summary>
+        <p>Each chapter is a short, focused read (10–15 minutes) built around one question. Most readers finish the whole book in a few sittings, then use the 14-day plan alongside it.</p>
+      </details>
+      <details>
+        <summary>Is this relevant if I'm not in Nigeria?</summary>
+        <p>Yes. The core explanations apply everywhere. A few sections, like food swaps and blood pressure context, include specific relevance for Nigerian and African readers, but the tools work regardless of where you live.</p>
+      </details>
+      <details>
+        <summary>What if I don't finish the 14-day plan perfectly?</summary>
+        <p>That's expected, and the book says so directly. Missing a day doesn't mean starting over — the plan is built to be picked back up, not followed perfectly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>You Don't Have to Feel This Way Tomorrow, Too.</h2>
+    <p class="lede">Every day you wait is another day of guessing. Get the map, and start today.</p>
+    <div class="actions">
+      <a href="https://selar.com/474410d18l" class="btn btn-primary">Get Instant Access →</a>
+      <a href="#pricing" class="btn btn-ghost">See what's inside</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="brand"><span class="mark"><img src="img/logo.jpg" alt=""></span> Wellness Blueprint</div>
+      <div class="footer-note">This book is educational and does not replace professional medical advice. If anything you read feels overwhelming or unmanageable, please reach out to a licensed doctor or therapist. © 2026 Wellness Blueprint. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2340000000000?text=Hi!%20I'd%20like%20to%20know%20more%20about%20the%20Tired%2C%20Wired%20%26%20Worried%20ebook" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <span class="wa-ping"></span>
+  <svg viewBox="0 0 24 24"><path d="M17.6 6.32A8.85 8.85 0 0012.03 3.5c-4.9 0-8.9 4-8.9 8.9 0 1.57.41 3.1 1.19 4.45L3 21l4.28-1.12a8.9 8.9 0 004.75 1.36h.01c4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.62-2.34-6.02zm-5.57 13.7h-.01a7.4 7.4 0 01-3.77-1.03l-.27-.16-2.8.74.75-2.73-.18-.28a7.38 7.38 0 01-1.13-3.96c0-4.08 3.32-7.4 7.41-7.4a7.36 7.36 0 017.4 7.4c0 4.08-3.32 7.42-7.4 7.42zm4.06-5.55c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.66-.18-.44-.37-.38-.5-.38-.13-.01-.28-.01-.43-.01a.83.83 0 00-.6.28c-.2.22-.79.77-.79 1.87s.81 2.17.92 2.32c.11.15 1.6 2.44 3.87 3.42.54.23.96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.31-.54 1.5-1.05.18-.51.18-.95.13-1.05-.05-.1-.2-.16-.42-.27z"/></svg>
+</a>
+
+<script>
+  const phases = [
+    {label:"breathe in", ms:4000},
+    {label:"hold", ms:2000},
+    {label:"breathe out", ms:4000},
+    {label:"hold", ms:2000}
+  ];
+  let i = 0;
+  const labelEl = document.getElementById('pacerLabel');
+  function cycle(){
+    labelEl.textContent = phases[i].label;
+    setTimeout(()=>{
+      i = (i+1) % phases.length;
+      cycle();
+    }, phases[i].ms);
+  }
+  cycle();
+</script>
+
+</body>
+</html>
